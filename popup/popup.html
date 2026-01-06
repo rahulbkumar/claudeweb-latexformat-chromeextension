@@ -19,7 +19,9 @@
       font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
       width: 300px;
       padding: 24px;
-      background: #000000;
+      background-color: #000000;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+      background-size: 16px 16px;
       color: #ffffff;
     }
 
@@ -48,7 +50,11 @@
     }
 
     .section {
-      margin-bottom: 20px;
+      margin-bottom: 16px;
+    }
+
+    .section:last-of-type {
+      margin-bottom: 0;
     }
 
     .toggle-row {
@@ -56,9 +62,10 @@
       justify-content: space-between;
       align-items: center;
       padding: 16px;
-      background: #111111;
-      border: 1px solid #333333;
+      background: #0a0a0a;
+      border: 1px solid #2a2a2a;
       border-radius: 12px;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06);
     }
 
     .toggle-content {
@@ -143,11 +150,12 @@
       font-weight: 500;
       color: #000000;
       background: #ffffff;
-      border: none;
+      border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 12px;
       cursor: pointer;
       transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
       letter-spacing: -0.01em;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
     }
 
     .render-btn:hover {
@@ -172,9 +180,13 @@
       font-weight: 500;
       color: #666666;
       text-align: center;
-      margin-top: 16px;
-      min-height: 18px;
+      margin-top: 12px;
+      min-height: 0;
       transition: all 0.2s ease;
+    }
+
+    .status:empty {
+      display: none;
     }
 
     .status.success {
