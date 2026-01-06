@@ -28,17 +28,17 @@
   color: inherit;
 }
 
-/* Error styling */
+/* Error styling - black and white theme */
 .katex .katex-error {
-  color: #cc0000;
+  color: #666666;
   font-style: italic;
 }
 
-/* Hover effect to show original LaTeX */
+/* Hover effect to show original LaTeX - subtle black/white */
 .claude-latex-inline:hover,
 .claude-latex-display:hover {
-  background-color: rgba(128, 128, 128, 0.1);
-  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
   cursor: help;
 }
 
@@ -48,8 +48,12 @@
     color: inherit;
   }
 
+  .katex .katex-error {
+    color: #999999;
+  }
+
   .claude-latex-inline:hover,
   .claude-latex-display:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.08);
   }
 }
