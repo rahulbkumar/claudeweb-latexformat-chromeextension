@@ -1,0 +1,55 @@
+/* Claude LaTeX Formatter - Custom Styles */
+
+/* Inline LaTeX */
+.claude-latex-inline {
+  display: inline;
+  vertical-align: baseline;
+}
+
+.claude-latex-inline .katex {
+  font-size: 1em;
+}
+
+/* Display (block) LaTeX */
+.claude-latex-display {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.claude-latex-display .katex-display {
+  margin: 0;
+}
+
+/* Ensure KaTeX inherits text color */
+.katex {
+  color: inherit;
+}
+
+/* Error styling */
+.katex .katex-error {
+  color: #cc0000;
+  font-style: italic;
+}
+
+/* Hover effect to show original LaTeX */
+.claude-latex-inline:hover,
+.claude-latex-display:hover {
+  background-color: rgba(128, 128, 128, 0.1);
+  border-radius: 3px;
+  cursor: help;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .katex {
+    color: inherit;
+  }
+
+  .claude-latex-inline:hover,
+  .claude-latex-display:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
